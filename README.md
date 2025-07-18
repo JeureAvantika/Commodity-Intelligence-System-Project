@@ -58,6 +58,10 @@ This platform is built with a focus on improving transparency in agricultural tr
   - Month number
 - Predicts market price using historical trend data.
 
+#3 Link for the Dataset
+  https://drive.google.com/drive/folders/1iINQST7vLmkMckZ0o6ZS0D7aoTUavm-0?usp=sharing
+
+  
 #Important:  
 > Both YOLOv8 and Regression models **must be trained** before deployment.  
 > The system relies on these models to:
