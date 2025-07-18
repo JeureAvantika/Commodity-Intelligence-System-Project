@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8770C72B-39ED-41B9-B86E-DE2C2A5FE789}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewCISProject</RootNamespace>
+    <AssemblyName>NewCISProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="AdminLoginPage.aspx" />
+    <Content Include="AdminPage.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="detect_yolo.py" />
+    <Content Include="Example.aspx" />
+    <Content Include="freshness_api.py" />
+    <Content Include="FruitFreshnessDataset\train\images\ajbanana1.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajbanana2rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajbanana3.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajbanana4.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajonion1rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajonion2rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\ajonion3.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\akcapsicum1.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\akpotato1.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\akpotato2.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\akpotato3.jpeg" />
+    <Content Include="FruitFreshnessDataset\train\images\Apple3_jpeg.rf.47a9b1a857d563f4347ef4a8f19c6ed1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\apple4_jpeg.rf.709877f82ee95eb20303e0f827b633c3.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\apple5_jpeg.rf.34b6e16266b8e649c65b62956385886d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\apple6_jpeg.rf.81c64df7cf5579484ff9aec1d7afe59c.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum12_jpg.rf.5a5bcf9a28a6a0b946705027b60b5df1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum15_jpg.rf.47dd22f2351c7eb1d5a1d12c8f11712e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum16_jpg.rf.52c533037d36a4e60b823bb45cdb76e7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum17_jpg.rf.782d7ec39cafc5b6d7b7b1c254d84d8a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum21_jpg.rf.011e81bcae2688cb047c6090e390c59c.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum6_jpg.rf.6f9bf46f563fcd202e8b81cef6fe9a97.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum7_jpg.rf.3bde4644fe983b137f159f2df989c07f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum8_jpg.rf.ece011149294cdebba8965481c29d9a6.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\capsicum9_jpg.rf.f2f42a3c9439a537fb3958fe61c0110c.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_100_jpg.rf.b5eadcc1a8fcd201906487c638e30d2d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_10_jpg.rf.154a02d6e82c9d65e7dbd010ce88200e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_10_jpg.rf.cc931348e84407d479c1f724b4b87e07.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_11_JPG.rf.329433cd0061e44e6e4987f75bc64b22.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_11_jpg.rf.7793dbf920d230a13661460636d04fc9.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_12_jpg.rf.7d5a74bad03f1ce4a3087922070fde36.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_13_jpg.rf.06ad86083d15813686fd8f33a27bceab.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_13_jpg.rf.118bd1dee92e4d8d21321987daab048b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_13_jpg.rf.1bad1b52161acd84ac2a2e28a6357d63.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_13_jpg.rf.6047a9402b7d959c34bd7bd68e81261f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_14_jpg.rf.254c6bea1ddcae381c8c49d62ebef4fd.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_14_jpg.rf.cc4d48a5dbdbc2cea0c1f9915ec74ed4.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_15_jpg.rf.7767413ddae13cbdeaafc8c18f506018.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_15_jpg.rf.a21abd6d5f8d9d39fcc24c9d55f395b7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_15_jpg.rf.e960fd127d04dde5a2a7dc9ba3655e22.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_16_jpg.rf.d415f22a30c5d668b438a80cda443015.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_16_jpg.rf.f8498e9acfe365f1c6e4f628ef3853ef.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_17_jpg.rf.0cc77c44d78cfff7f0f360304b9a5335.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_18_jpg.rf.67f97d00865bff7d8c4101481dafa604.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_18_jpg.rf.a59d9ae6dcf17a8472f4fbe9d35a9437.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_19_jpg.rf.20089425dfba3e39a988eb6d8f55e266.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_19_jpg.rf.f50e3682352b6eaaa2a2c471dbf3ec4a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_1_jpg.rf.176ce378fcccc0876f80229f921965dc.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_1_jpg.rf.de39ae44e54b0f80675e1b2e0828655f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_20_jpg.rf.ba8bd2c26c6df009fa785d71b3f91343.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_20_jpg.rf.d9706a060277b16fa2eacfcb35e0e52e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_21_jpg.rf.223e1e4d5927b40c5ebe29464d158714.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_21_JPG.rf.bb1bc689ebeae048493fe1904a2c8296.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_22_jpg.rf.ead758e16ea513337866f64c1ff7afd0.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_23_jpg.rf.44b0326f0aae3bb165b198e197a99a3a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_23_jpg.rf.a5c351153313dcede55359ea869e45e6.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_24_jpg.rf.a8da25365ae624e0ad16ab20ba43aba5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_24_jpg.rf.d56a37a97d909fdc79757e54dcc25134.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_25_jpg.rf.1559ec272cd66c88bdf34b28a5f2f0a5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_25_jpg.rf.75e32b7caab313a467085642ae56f2ca.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_26_jpg.rf.f63155ad6b1da5b9338f2c053b270016.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_27_jpg.rf.b9770258dfe8a78b494433ef5faa2113.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_28_jpg.rf.0f2a10fe78613b04350081555cb809e6.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_28_jpg.rf.bb1ad798fdeb7f733209b3a9b47fbdbb.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_29_jpg.rf.2007519ee6d52c65fb088fc951b380f1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_29_jpg.rf.9151560255567ad631feac0029300666.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_2_jpg.rf.e6fda98448a2ca1a0d9e3c0295e34372.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_30_jpg.rf.466df37592da8c2f04dcaa39aca6db79.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_30_jpg.rf.e6fd5faa7add5ad1f65776aeddc82a43.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_31_jpg.rf.4836124ab82ba69d67620d38620ef70e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_31_jpg.rf.c6a75d016c2ad129ef51e09d88d11574.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_32_jpg.rf.ccbd58905b12fdfd093e509054ecbaaf.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_33_jpg.rf.1d506f6a53b286cc79c3bb0ddcfc9d22.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_33_png.rf.cca7ef815cfa68ca006f73f6d3c21ff1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_34_png.rf.385c3c0cde255d94eb65ac99984f29bc.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_36_jpg.rf.0c9044e4d1fc52fd9f858929ec04bcfb.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_36_jpg.rf.1425145cc18b255b22374bca8c93eb7b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_38_jpg.rf.36c8e19d1bfdd3f6b249cc693a073dc3.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_39_jpg.rf.ff5f9cd48acdb6ebc5616969d3d575a5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_3_jpg.rf.0550e182ab9411dda8a070005e4dbf5b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_3_jpg.rf.cb85718885755cc183eb025472b2d912.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_40_jpg.rf.2cc9445f212ebe5dab83e2b4a47c5991.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_41_jpg.rf.62d95dd89499f6e41aec97f7e5fc1a50.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_43_jpg.rf.6c90bc5834d50f2b8cadc169a568967f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_43_jpg.rf.b23a2457cbea4d397e9cd92e3bdfa900.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_44_jpg.rf.b0dbe33fb7d3b3449888d482c8a82c23.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_45_jpg.rf.4c9483dadf03ff354ddf08a68cbbd287.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_45_jpg.rf.b56d2e2c5ddcedf7850ad9ca8fd4d37f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_46_jpg.rf.777e23943d4e454e095b9bd27631e7cf.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_46_png.rf.3bd6e54a7745dcbdac1b19a19cff8521.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_47_jpg.rf.8f9452092a7733b287aaeedfab0b43d8.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_47_jpg.rf.9baa067a4fc1c0485e14596aa5516e05.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_47_jpg.rf.bfb3125c7fea6df2be92eda9fc9ea356.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_49_jpg.rf.871a42819d68cbac578a4ad2a425cbdc.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_49_png.rf.3da810ae07c30d14b58641a599b3fc89.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_4_jpg.rf.2cec349cc724990423e42116ed48a9d7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_50_jpg.rf.9938b130ab4ecc8f4dc50372f106e8ab.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_50_jpg.rf.fb7c85cfc08a93e7db406a401da48f1d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_51_jpeg.rf.106673ce938759e5a9452dde31618fb1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_51_jpg.rf.95ff2d63ec33cc7d0abce878252cb849.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_52_jpg.rf.837932a887bdcbf1b368ece34982d1e4.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_52_jpg.rf.e1163b86646cf8c5f1e20944d7fcb2e5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_52_jpg.rf.ec521d5e14f235dd5ad15703da90060d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_53_jpg.rf.1688a1d522be366adf68be21bbda664b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_53_jpg.rf.2ea6d37d68170b5aebbcbec692847237.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_53_png.rf.2a6f25bb925311bd28e5b82d8a8b093d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_54_jpg.rf.57efc779b2ba402e59bbc66a1e3ef03d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_54_jpg.rf.e7c246f2f1a03360e6c78427c019201e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_54_jpg.rf.ed1dca8ff141af0271aef8a74a06b40a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_55_jpg.rf.fb937c18265fa390c2bd56b87e4e789a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_56_jpg.rf.0932e1681027df79034d17ba58fbeed7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_56_jpg.rf.9680c633669b788108e49b34cf55f831.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_57_jpg.rf.63f8e6448d05a2e67f429712dd26a0f5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_57_jpg.rf.9a15fe68f59389f08c87dfc9c79c4d58.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_58_jpg.rf.0a6824bcbdfe9be35bf4034fa7eecb7c.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_58_jpg.rf.15e979ef3a9efb24f47ef02ce78839a7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_58_png.rf.4d21f975e51003bc03d78be2383f88d0.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_59_jpg.rf.d73ae3b50276c13652d8cb6f42f3509a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_5_jpg.rf.5e513aeedcab69ef3a3e2cff648096a5.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_5_jpg.rf.f0a96171f5821486c095d637dd6b0788.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_60_jpg.rf.9bb8f1abe7942875b3d310fd143def49.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_60_jpg.rf.f8d2d84983b4e770119bc43b39248c30.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_61_jpg.rf.1bd5d5046b08ab48268cc330edf5a7cc.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_61_jpg.rf.7602b10ef035b7d000719ce8e71d616b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_62_jpg.rf.027bb16365cb4beeeee52b258b08be30.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_62_jpg.rf.b4238f08a587dd20cb06a192ad589551.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_64_jpeg.rf.06af7951709da35749cd986f5a888176.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_64_jpg.rf.4ecbd83204358925b096e51c4222dd34.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_65_jpg.rf.74e6eeaa053b70e7d6cdef34f695f1a9.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_65_png.rf.4b777693740541b77f49c27be47ac295.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_66_jpg.rf.97f183b77dc37f44326e6cc752aa16c6.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_66_jpg.rf.c6916e7af3c2baa62a2e5e52edbb8054.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_67_jpg.rf.63d2d9b76ddf757358ee449a1cb9f80d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_68_jpg.rf.0afca424e5736ef9f938115a94db4f6e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_68_jpg.rf.3b1028a1ed76401273f878df8e2ac95f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_69_jpg.rf.32884d0e750e333b3f6d980eedb92a2b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_69_jpg.rf.46f627ab90dda5ac0f36042829808614.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_69_png.rf.d0ef31acffe28356d6ee45bed7f33354.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_6_jpg.rf.e86988f12a057b5b43554cfa712fe133.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_70_jpg.rf.a3521c06214f47b6f035f3178a0f1865.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_71_jpg.rf.9683e4d52cffbed03cbef06871a0b8eb.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_71_png.rf.bfa9e9c0fa5af20345384f6df49145fc.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_72_jpg.rf.20f21ae7eb53e5e8b9b8ef64b7ca5d5b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_72_jpg.rf.6e145f2b12748ef2cf5226ee1aa381b8.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_73_jpg.rf.4d2f250e804bf3f25c328159ce9b8725.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_73_jpg.rf.db37aa32e5aeed76916b7411eb5b4df2.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_74_jpg.rf.d50112d6e629093e417b18ccb4b84504.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_75_jpg.rf.723cb86af832afd8faa04029365d226d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_76_jpg.rf.affe415313eef051bb1435ac3f4e8312.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_77_jpg.rf.f623c2d9b9c1f8ff05255438fe6658b1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_78_jpg.rf.12a384f2c0ac715fd0126c779f2d6310.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_78_jpg.rf.8cec6784026fb2f192b7cef818a8702a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_78_png.rf.a2f05f1310663f126821a743f734aaad.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_7_jpg.rf.5a90fa307677ae237e08aba92fa75636.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_80_jpg.rf.3008c7d240176c90767907f8301f7cc7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_80_png.rf.203a0b752bdd8fe82523a5cf265a4c85.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_80_png.rf.3fd5a86382b066282cdb68afa7c12774.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_81_jpg.rf.1a793f642de01095c5c0147fff37002a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_81_jpg.rf.e6d3a1842547a44b0d00cc600c31185f.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_82_jpg.rf.17f126e385486b54bc0c57b4994e5deb.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_82_jpg.rf.35a688676857af18e97497556238f444.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_83_jpg.rf.f15d3d76cc6a66bbf49d0236dccd4201.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_83_png.rf.b8394d2dabb3398e567c2eb4b708c1f9.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_84_jpg.rf.2ba01b722f3b574516f238b5b35ee33e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_84_jpg.rf.8d3f575e38421572e5506e6301e2fd67.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_84_png.rf.c3e3410f058fabdd1d7b774ebd126f58.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_85_jpg.rf.6b32e2f6c602005ce903d42bb2d13a90.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_85_jpg.rf.e00882740c84d7966728de9d5d3162d0.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_86_jpg.rf.bf5a8338537cb134299a723081fcc518.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_86_jpg.rf.f68ab897a91089874d4d963dfc01da7d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_88_jpeg.rf.4a15933944bc5b127a27fe61c86a20a2.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_88_png.rf.40b639aa4cd4e2a1ac87e9744d6ce6ff.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_89_jpg.rf.11a4ba896f64e717bbbc4aa1997c403c.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_8_jpg.rf.06e0ca7649d3a46e99610e13a0076293.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_90_jpg.rf.ac386719741a8f2e568824d2675c1b84.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_90_png.rf.c4dfdb27c0a766079e5f96dc66e19ec1.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_91_jpg.rf.d55875a96d513d972be92c5cfb72d2d3.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_92_jpg.rf.1f8af76a7bd9acc2a52a4cb2c459a8ea.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_92_jpg.rf.4d4f54aad9ed036ffc338927a6a24e7a.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_97_jpg.rf.325f2e9b54142e29b4d5b92419807337.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\Image_9_jpg.rf.2299b0f1e6ceebf339a546459cb841ca.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\potato4_jpg.rf.678867c258a74bb37f8937e9a41ee42b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\potato5_jpg.rf.f4feb7648969573616bda317f3b07e64.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\potato6_jpg.rf.d8edd7cc7e3b91adf3917e3844f5a51b.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\potato8_jpg.rf.ffac8f88e9ae06c4bb9c64ade145e658.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-1tYk3rOFSsIbUA8o6H5O_jpg.rf.fe5e750b54dcc6e2470253abb49ecba7.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-3cpBmtAacdSLq0OkRTmi_jpg.rf.3ac386b26ea82971ef314356395afdc3.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-3x1r586A2yX4D8dVPzgc_jpg.rf.a2dda538d7672034401423c1189ae0b6.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-5SH9fgLaYJ5bprMIJkpc_jpg.rf.932fe510a1e17ccc490300131ccdd704.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-AhHsgTCYoDMgsZPOfwM1_jpg.rf.9fc8ed71b46bda5ebf80ff9f02cada72.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-fesY7buj2D4bVSZTc1dU_jpg.rf.600832050041b0e165d3a3816ad20861.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-HiqrHqhJANUBYrD6SOJZ_jpg.rf.e2b07b46caeddf26b1b5edbf1f4c8e4e.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-KhRh2xUEDexrON26FDUZ_jpg.rf.4070b96d12d5a989140e7a4a18dd011d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-nDWqT9Whj8wSuZidtotS_jpg.rf.a3d0a5a3ab32f1d34914168ba4623c27.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-SMxUklC5d6fBNGR4cOBW_jpg.rf.2fd31c7d25fa4d5b6896e7122153bec3.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-snEPHpzjvBGFCA0e93QI_jpg.rf.f6dd871b02a6666fda76feddc7c038af.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-tq183G6cuoXnmovcMLEm_jpg.rf.5f4298de0f3eb5c0e85cd96347333760.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-UyesmQpG18pZ3xVQBK0d_jpg.rf.013412827368236fa81d6c440ffab937.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-V7MBo0h9NPbY3WZS5tWa_jpg.rf.573dd9fc346156a8f28e8c503e125fd2.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-vftHgILa1SVmkbE6Hdw7_jpg.rf.bac620eb36a143d5e5bcedb586389c27.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-woEaDcxMqrUnkpTWZ8PU_jpg.rf.df5ba3ac1ad0ef9c01ddf82ca92a091d.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-xg2QQ76TVwi7UYSphCqX_jpg.rf.9c3ef05ce1ad4e02e50e0ca439f52035.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-xOFyPyXyWGUsxlYBUap2_jpg.rf.0988163860a9a8f7a2f42126a2758b45.jpg" />
+    <Content Include="FruitFreshnessDataset\train\images\suggested-z9kWB5djNmu1V2yV7OTS_jpg.rf.25cbb72ad30ede9fce3d77adb6e21c26.jpg" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajbanana1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajbanana2rotten.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajbanana3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajbanana4.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajonion1rotten.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajonion2rotten.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\ajonion3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\akcapsicum1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\akpotato1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\akpotato2.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\akpotato3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Apple3_jpeg.rf.47a9b1a857d563f4347ef4a8f19c6ed1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\apple4_jpeg.rf.709877f82ee95eb20303e0f827b633c3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\apple5_jpeg.rf.34b6e16266b8e649c65b62956385886d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\apple6_jpeg.rf.81c64df7cf5579484ff9aec1d7afe59c.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum12_jpg.rf.5a5bcf9a28a6a0b946705027b60b5df1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum15_jpg.rf.47dd22f2351c7eb1d5a1d12c8f11712e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum16_jpg.rf.52c533037d36a4e60b823bb45cdb76e7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum17_jpg.rf.782d7ec39cafc5b6d7b7b1c254d84d8a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum21_jpg.rf.011e81bcae2688cb047c6090e390c59c.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum6_jpg.rf.6f9bf46f563fcd202e8b81cef6fe9a97.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum7_jpg.rf.3bde4644fe983b137f159f2df989c07f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum8_jpg.rf.ece011149294cdebba8965481c29d9a6.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\capsicum9_jpg.rf.f2f42a3c9439a537fb3958fe61c0110c.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_100_jpg.rf.8c64c1c6cb1a63be9dc8c220677e1b17.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_100_jpg.rf.b5eadcc1a8fcd201906487c638e30d2d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_10_jpg.rf.154a02d6e82c9d65e7dbd010ce88200e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_10_jpg.rf.cc931348e84407d479c1f724b4b87e07.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_11_JPG.rf.329433cd0061e44e6e4987f75bc64b22.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_11_jpg.rf.7793dbf920d230a13661460636d04fc9.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_11_png.rf.725dbd427e27c581593714602662be7d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_12_jpg.rf.7d5a74bad03f1ce4a3087922070fde36.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_13_jpg.rf.06ad86083d15813686fd8f33a27bceab.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_13_jpg.rf.118bd1dee92e4d8d21321987daab048b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_13_jpg.rf.1bad1b52161acd84ac2a2e28a6357d63.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_13_jpg.rf.6047a9402b7d959c34bd7bd68e81261f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_14_jpg.rf.254c6bea1ddcae381c8c49d62ebef4fd.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_14_jpg.rf.cc4d48a5dbdbc2cea0c1f9915ec74ed4.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_15_jpg.rf.7767413ddae13cbdeaafc8c18f506018.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_15_jpg.rf.a21abd6d5f8d9d39fcc24c9d55f395b7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_15_jpg.rf.e960fd127d04dde5a2a7dc9ba3655e22.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_16_jpg.rf.d415f22a30c5d668b438a80cda443015.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_16_jpg.rf.f8498e9acfe365f1c6e4f628ef3853ef.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_17_jpg.rf.0cc77c44d78cfff7f0f360304b9a5335.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_18_jpg.rf.67f97d00865bff7d8c4101481dafa604.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_18_jpg.rf.a59d9ae6dcf17a8472f4fbe9d35a9437.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_19_jpg.rf.20089425dfba3e39a988eb6d8f55e266.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_19_jpg.rf.f50e3682352b6eaaa2a2c471dbf3ec4a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_1_jpg.rf.176ce378fcccc0876f80229f921965dc.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_1_jpg.rf.de39ae44e54b0f80675e1b2e0828655f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_20_jpg.rf.ba8bd2c26c6df009fa785d71b3f91343.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_20_jpg.rf.d9706a060277b16fa2eacfcb35e0e52e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_21_jpg.rf.223e1e4d5927b40c5ebe29464d158714.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_21_JPG.rf.bb1bc689ebeae048493fe1904a2c8296.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_22_jpg.rf.ead758e16ea513337866f64c1ff7afd0.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_23_jpg.rf.44b0326f0aae3bb165b198e197a99a3a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_23_jpg.rf.a5c351153313dcede55359ea869e45e6.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_24_jpg.rf.a8da25365ae624e0ad16ab20ba43aba5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_24_jpg.rf.d56a37a97d909fdc79757e54dcc25134.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_25_jpg.rf.1559ec272cd66c88bdf34b28a5f2f0a5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_25_jpg.rf.75e32b7caab313a467085642ae56f2ca.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_26_jpg.rf.f63155ad6b1da5b9338f2c053b270016.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_27_jpg.rf.b9770258dfe8a78b494433ef5faa2113.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_28_jpg.rf.0f2a10fe78613b04350081555cb809e6.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_28_jpg.rf.bb1ad798fdeb7f733209b3a9b47fbdbb.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_29_jpg.rf.2007519ee6d52c65fb088fc951b380f1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_29_jpg.rf.9151560255567ad631feac0029300666.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_2_jpg.rf.e6fda98448a2ca1a0d9e3c0295e34372.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_30_jpg.rf.466df37592da8c2f04dcaa39aca6db79.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_30_jpg.rf.e6fd5faa7add5ad1f65776aeddc82a43.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_31_jpg.rf.4836124ab82ba69d67620d38620ef70e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_31_jpg.rf.c6a75d016c2ad129ef51e09d88d11574.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_32_jpg.rf.ccbd58905b12fdfd093e509054ecbaaf.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_33_jpg.rf.1d506f6a53b286cc79c3bb0ddcfc9d22.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_33_png.rf.cca7ef815cfa68ca006f73f6d3c21ff1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_34_png.rf.385c3c0cde255d94eb65ac99984f29bc.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_36_jpg.rf.0c9044e4d1fc52fd9f858929ec04bcfb.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_36_jpg.rf.1425145cc18b255b22374bca8c93eb7b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_38_jpg.rf.36c8e19d1bfdd3f6b249cc693a073dc3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_39_jpg.rf.ff5f9cd48acdb6ebc5616969d3d575a5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_3_jpg.rf.0550e182ab9411dda8a070005e4dbf5b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_3_jpg.rf.cb85718885755cc183eb025472b2d912.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_40_jpg.rf.2cc9445f212ebe5dab83e2b4a47c5991.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_40_jpg.rf.d58959f572dbaaf7cf6b625724f59833.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_41_jpg.rf.3f2c62ad3da6088b227508e7a1c0cbaa.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_41_jpg.rf.62d95dd89499f6e41aec97f7e5fc1a50.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_42_jpg.rf.3a179de13f5522d4594c4e21d2322052.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_43_jpg.rf.6c90bc5834d50f2b8cadc169a568967f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_43_jpg.rf.b23a2457cbea4d397e9cd92e3bdfa900.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_43_png.rf.578a8fe0e121f5f033dcbccb2af5b2ca.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_44_jpg.rf.b0dbe33fb7d3b3449888d482c8a82c23.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_44_jpg.rf.e4d0e16a85068cc998eab1c09ea93d64.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_45_jpg.rf.4c9483dadf03ff354ddf08a68cbbd287.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_45_jpg.rf.b56d2e2c5ddcedf7850ad9ca8fd4d37f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_46_jpg.rf.777e23943d4e454e095b9bd27631e7cf.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_46_png.rf.3bd6e54a7745dcbdac1b19a19cff8521.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_47_jpg.rf.8f9452092a7733b287aaeedfab0b43d8.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_47_jpg.rf.9baa067a4fc1c0485e14596aa5516e05.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_47_jpg.rf.bfb3125c7fea6df2be92eda9fc9ea356.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_49_jpg.rf.871a42819d68cbac578a4ad2a425cbdc.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_49_png.rf.3da810ae07c30d14b58641a599b3fc89.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_4_jpg.rf.2cec349cc724990423e42116ed48a9d7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_50_jpg.rf.9938b130ab4ecc8f4dc50372f106e8ab.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_50_jpg.rf.fb7c85cfc08a93e7db406a401da48f1d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_51_jpeg.rf.106673ce938759e5a9452dde31618fb1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_51_jpg.rf.95ff2d63ec33cc7d0abce878252cb849.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_52_jpg.rf.837932a887bdcbf1b368ece34982d1e4.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_52_jpg.rf.e1163b86646cf8c5f1e20944d7fcb2e5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_52_jpg.rf.ec521d5e14f235dd5ad15703da90060d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_53_jpg.rf.1688a1d522be366adf68be21bbda664b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_53_jpg.rf.2ea6d37d68170b5aebbcbec692847237.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_53_png.rf.2a6f25bb925311bd28e5b82d8a8b093d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_54_jpg.rf.57efc779b2ba402e59bbc66a1e3ef03d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_54_jpg.rf.e7c246f2f1a03360e6c78427c019201e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_54_jpg.rf.ed1dca8ff141af0271aef8a74a06b40a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_55_jpg.rf.eec8b96346db30628abe24abe480f6ec.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_55_jpg.rf.fb937c18265fa390c2bd56b87e4e789a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_56_jpg.rf.0932e1681027df79034d17ba58fbeed7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_56_jpg.rf.9680c633669b788108e49b34cf55f831.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_57_jpg.rf.63f8e6448d05a2e67f429712dd26a0f5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_57_jpg.rf.9a15fe68f59389f08c87dfc9c79c4d58.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_58_jpg.rf.0a6824bcbdfe9be35bf4034fa7eecb7c.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_58_jpg.rf.15e979ef3a9efb24f47ef02ce78839a7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_58_png.rf.4d21f975e51003bc03d78be2383f88d0.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_59_jpg.rf.d73ae3b50276c13652d8cb6f42f3509a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_5_jpg.rf.5e513aeedcab69ef3a3e2cff648096a5.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_5_jpg.rf.f0a96171f5821486c095d637dd6b0788.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_60_jpg.rf.9bb8f1abe7942875b3d310fd143def49.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_60_jpg.rf.f8d2d84983b4e770119bc43b39248c30.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_61_jpg.rf.1bd5d5046b08ab48268cc330edf5a7cc.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_61_jpg.rf.7602b10ef035b7d000719ce8e71d616b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_62_jpg.rf.027bb16365cb4beeeee52b258b08be30.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_62_jpg.rf.b4238f08a587dd20cb06a192ad589551.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_64_jpeg.rf.06af7951709da35749cd986f5a888176.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_64_jpg.rf.4ecbd83204358925b096e51c4222dd34.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_65_jpg.rf.74e6eeaa053b70e7d6cdef34f695f1a9.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_65_png.rf.4b777693740541b77f49c27be47ac295.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_66_jpg.rf.97f183b77dc37f44326e6cc752aa16c6.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_66_jpg.rf.c6916e7af3c2baa62a2e5e52edbb8054.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_67_jpg.rf.63d2d9b76ddf757358ee449a1cb9f80d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_68_jpg.rf.0afca424e5736ef9f938115a94db4f6e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_68_jpg.rf.3b1028a1ed76401273f878df8e2ac95f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_69_jpg.rf.32884d0e750e333b3f6d980eedb92a2b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_69_jpg.rf.46f627ab90dda5ac0f36042829808614.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_69_png.rf.d0ef31acffe28356d6ee45bed7f33354.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_6_jpg.rf.e86988f12a057b5b43554cfa712fe133.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_70_jpg.rf.a3521c06214f47b6f035f3178a0f1865.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_71_jpg.rf.9683e4d52cffbed03cbef06871a0b8eb.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_71_png.rf.bfa9e9c0fa5af20345384f6df49145fc.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_72_jpg.rf.20f21ae7eb53e5e8b9b8ef64b7ca5d5b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_72_jpg.rf.6e145f2b12748ef2cf5226ee1aa381b8.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_73_jpg.rf.4d2f250e804bf3f25c328159ce9b8725.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_73_jpg.rf.db37aa32e5aeed76916b7411eb5b4df2.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_74_jpg.rf.d50112d6e629093e417b18ccb4b84504.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_75_jpg.rf.723cb86af832afd8faa04029365d226d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_76_jpg.rf.affe415313eef051bb1435ac3f4e8312.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_77_jpg.rf.f623c2d9b9c1f8ff05255438fe6658b1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_78_jpg.rf.12a384f2c0ac715fd0126c779f2d6310.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_78_jpg.rf.8cec6784026fb2f192b7cef818a8702a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_78_png.rf.a2f05f1310663f126821a743f734aaad.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_7_jpg.rf.5a90fa307677ae237e08aba92fa75636.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_80_jpg.rf.3008c7d240176c90767907f8301f7cc7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_80_png.rf.203a0b752bdd8fe82523a5cf265a4c85.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_80_png.rf.3fd5a86382b066282cdb68afa7c12774.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_81_jpg.rf.1a793f642de01095c5c0147fff37002a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_81_jpg.rf.e6d3a1842547a44b0d00cc600c31185f.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_82_jpg.rf.17f126e385486b54bc0c57b4994e5deb.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_82_jpg.rf.35a688676857af18e97497556238f444.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_83_jpg.rf.f15d3d76cc6a66bbf49d0236dccd4201.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_83_png.rf.b8394d2dabb3398e567c2eb4b708c1f9.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_84_jpg.rf.2ba01b722f3b574516f238b5b35ee33e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_84_jpg.rf.8d3f575e38421572e5506e6301e2fd67.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_84_png.rf.c3e3410f058fabdd1d7b774ebd126f58.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_85_jpg.rf.6b32e2f6c602005ce903d42bb2d13a90.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_85_jpg.rf.e00882740c84d7966728de9d5d3162d0.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_86_jpg.rf.1da19c6141ff6e62a4da4cdccd0ff9b2.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_86_jpg.rf.bf5a8338537cb134299a723081fcc518.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_86_jpg.rf.f68ab897a91089874d4d963dfc01da7d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_88_jpeg.rf.4a15933944bc5b127a27fe61c86a20a2.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_88_png.rf.40b639aa4cd4e2a1ac87e9744d6ce6ff.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_89_jpg.rf.11a4ba896f64e717bbbc4aa1997c403c.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_8_jpg.rf.06e0ca7649d3a46e99610e13a0076293.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_90_jpg.rf.ac386719741a8f2e568824d2675c1b84.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_90_png.rf.c4dfdb27c0a766079e5f96dc66e19ec1.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_91_jpg.rf.d55875a96d513d972be92c5cfb72d2d3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_92_jpg.rf.1f8af76a7bd9acc2a52a4cb2c459a8ea.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_92_jpg.rf.4d4f54aad9ed036ffc338927a6a24e7a.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_97_jpg.rf.325f2e9b54142e29b4d5b92419807337.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\Image_9_jpg.rf.2299b0f1e6ceebf339a546459cb841ca.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\potato4_jpg.rf.678867c258a74bb37f8937e9a41ee42b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\potato5_jpg.rf.f4feb7648969573616bda317f3b07e64.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\potato6_jpg.rf.d8edd7cc7e3b91adf3917e3844f5a51b.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\potato8_jpg.rf.ffac8f88e9ae06c4bb9c64ade145e658.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-1tYk3rOFSsIbUA8o6H5O_jpg.rf.fe5e750b54dcc6e2470253abb49ecba7.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-3cpBmtAacdSLq0OkRTmi_jpg.rf.3ac386b26ea82971ef314356395afdc3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-3x1r586A2yX4D8dVPzgc_jpg.rf.a2dda538d7672034401423c1189ae0b6.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-5SH9fgLaYJ5bprMIJkpc_jpg.rf.932fe510a1e17ccc490300131ccdd704.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-AhHsgTCYoDMgsZPOfwM1_jpg.rf.9fc8ed71b46bda5ebf80ff9f02cada72.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-fesY7buj2D4bVSZTc1dU_jpg.rf.600832050041b0e165d3a3816ad20861.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-HiqrHqhJANUBYrD6SOJZ_jpg.rf.e2b07b46caeddf26b1b5edbf1f4c8e4e.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-KhRh2xUEDexrON26FDUZ_jpg.rf.4070b96d12d5a989140e7a4a18dd011d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-nDWqT9Whj8wSuZidtotS_jpg.rf.a3d0a5a3ab32f1d34914168ba4623c27.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-SMxUklC5d6fBNGR4cOBW_jpg.rf.2fd31c7d25fa4d5b6896e7122153bec3.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-snEPHpzjvBGFCA0e93QI_jpg.rf.f6dd871b02a6666fda76feddc7c038af.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-tq183G6cuoXnmovcMLEm_jpg.rf.5f4298de0f3eb5c0e85cd96347333760.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-UyesmQpG18pZ3xVQBK0d_jpg.rf.013412827368236fa81d6c440ffab937.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-V7MBo0h9NPbY3WZS5tWa_jpg.rf.573dd9fc346156a8f28e8c503e125fd2.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-vftHgILa1SVmkbE6Hdw7_jpg.rf.bac620eb36a143d5e5bcedb586389c27.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-woEaDcxMqrUnkpTWZ8PU_jpg.rf.df5ba3ac1ad0ef9c01ddf82ca92a091d.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-xg2QQ76TVwi7UYSphCqX_jpg.rf.9c3ef05ce1ad4e02e50e0ca439f52035.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-xOFyPyXyWGUsxlYBUap2_jpg.rf.0988163860a9a8f7a2f42126a2758b45.txt" />
+    <Content Include="FruitFreshnessDataset\train\labels\suggested-z9kWB5djNmu1V2yV7OTS_jpg.rf.25cbb72ad30ede9fce3d77adb6e21c26.txt" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajbanana1.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajbanana2rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajbanana3.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajbanana4.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajonion1rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajonion2rotten.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\ajonion3.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\akcapsicum1.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\akpotato1.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\akpotato2.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\akpotato3.jpeg" />
+    <Content Include="FruitFreshnessDataset\valid\images\apple4_jpeg.rf.709877f82ee95eb20303e0f827b633c3.jpg" />
+    <Content Include="FruitFreshnessDataset\valid\images\apple5_jpeg.rf.34b6e16266b8e649c65b62956385886d.jpg" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajbanana1.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajbanana2rotten.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajbanana3.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajbanana4.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajonion1rotten.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajonion2rotten.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\ajonion3.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\akcapsicum1.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\akpotato1.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\akpotato2.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\akpotato3.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-1tYk3rOFSsIbUA8o6H5O_jpg.rf.fe5e750b54dcc6e2470253abb49ecba7.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-5SH9fgLaYJ5bprMIJkpc_jpg.rf.932fe510a1e17ccc490300131ccdd704.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-fesY7buj2D4bVSZTc1dU_jpg.rf.600832050041b0e165d3a3816ad20861.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-HiqrHqhJANUBYrD6SOJZ_jpg.rf.e2b07b46caeddf26b1b5edbf1f4c8e4e.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-KhRh2xUEDexrON26FDUZ_jpg.rf.4070b96d12d5a989140e7a4a18dd011d.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-tq183G6cuoXnmovcMLEm_jpg.rf.5f4298de0f3eb5c0e85cd96347333760.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-UyesmQpG18pZ3xVQBK0d_jpg.rf.013412827368236fa81d6c440ffab937.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-woEaDcxMqrUnkpTWZ8PU_jpg.rf.df5ba3ac1ad0ef9c01ddf82ca92a091d.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-xg2QQ76TVwi7UYSphCqX_jpg.rf.9c3ef05ce1ad4e02e50e0ca439f52035.txt" />
+    <Content Include="FruitFreshnessDataset\valid\labels\suggested-z9kWB5djNmu1V2yV7OTS_jpg.rf.25cbb72ad30ede9fce3d77adb6e21c26.txt" />
+    <Content Include="HelpPage.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="image\bgimg1.jpg" />
+    <Content Include="image\bgimg2.jpg" />
+    <Content Include="image\bgimg3.jpg" />
+    <Content Include="image\bgimg4.jpg" />
+    <Content Include="new.aspx" />
+    <Content Include="PricePrediction.aspx" />
+    <Content Include="PricePrediction.py" />
+    <Content Include="RegistrationPage.aspx" />
+    <Content Include="FarmerDashboard.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="GetFarmerDetails.ashx" />
+    <Content Include="input.json" />
+    <Content Include="ProductPriceIndex_1.csv" />
+    <Content Include="ProductPriceIndex_2.csv" />
+    <Content Include="FruitFreshnessDataset\data.yaml" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="Test.aspx" />
+    <Content Include="TextFile.py" />
+    <Content Include="TraderDashboard.aspx" />
+    <Content Include="TraderDashboardPage.aspx" />
+    <Content Include="train_yolo.py" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLoginPage.aspx.cs">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLoginPage.aspx.designer.cs">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detect_yolo.py.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detect_yolo.py.designer.cs">
+      <DependentUpon>detect_yolo.py.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Example.aspx.cs">
+      <DependentUpon>Example.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Example.aspx.designer.cs">
+      <DependentUpon>Example.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="freshness_api.py.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="freshness_api.py.designer.cs">
+      <DependentUpon>freshness_api.py.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetFarmerDetails.ashx.cs">
+      <DependentUpon>GetFarmerDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetFarmerDetails.ashx.designer.cs">
+      <DependentUpon>GetFarmerDetails.ashx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpPage.aspx.cs">
+      <DependentUpon>HelpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelpPage.aspx.designer.cs">
+      <DependentUpon>HelpPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="input.json.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="input.json.designer.cs">
+      <DependentUpon>input.json.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new.aspx.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new.aspx.designer.cs">
+      <DependentUpon>new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PricePrediction.aspx.cs">
+      <DependentUpon>PricePrediction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PricePrediction.aspx.designer.cs">
+      <DependentUpon>PricePrediction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationPage.aspx.cs">
+      <DependentUpon>RegistrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationPage.aspx.designer.cs">
+      <DependentUpon>RegistrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FarmerDashboard.aspx.cs">
+      <DependentUpon>FarmerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FarmerDashboard.aspx.designer.cs">
+      <DependentUpon>FarmerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TextFile.py.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TextFile.py.designer.cs">
+      <DependentUpon>TextFile.py.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraderDashboard.aspx.cs">
+      <DependentUpon>TraderDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraderDashboard.aspx.designer.cs">
+      <DependentUpon>TraderDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TraderDashboardPage.aspx.cs">
+      <DependentUpon>TraderDashboardPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TraderDashboardPage.aspx.designer.cs">
+      <DependentUpon>TraderDashboardPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="train_yolo.py.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="train_yolo.py.designer.cs">
+      <DependentUpon>train_yolo.py.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Uploads\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57433</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
