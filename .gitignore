@@ -1,0 +1,21 @@
+ # Ignore Visual Studio build files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Ignore Python virtual environment and cache
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore temp files and generated outputs
+*.log
+*.tmp
+runs/
+Uploads/
+
+# Ignore dataset folders (optional if very large)
+FruitFreshnessDataset/
